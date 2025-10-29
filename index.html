@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week6 | JS作業 | 2025</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://img.icons8.com/color/512/javascript.png"
+    />
+    <link rel="stylesheet" href="all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ticket section -->
+    <section class="ticket-area">
+      <div class="img-box">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/main_img.png?raw=true"
+          alt="main-img"
+        /><img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/logo.png?raw=true"
+          alt="logo-pic"
+        />
+      </div>
+      <form class="ticket-form">
+        <h1 class="H4 title">
+          <i class="bi bi-plus-circle" style="margin-right: 4px"></i>
+          新增旅遊套票
+        </h1>
+
+        <div class="input-area">
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="name">套票名稱</label>
+              <input
+                type="text"
+                placeholder="請填寫圖片名稱"
+                class="input-box-default"
+                id="name"
+              />
+            </div>
+
+            <div class="alert-message">
+              <!-- <i class="bi bi-exclamation-circle-fill"></i>
+                <p class="fs-sm">此欄必填！</p> -->
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="imgUrl">圖片網址</label>
+              <input
+                type="text"
+                placeholder="請填寫圖片網址"
+                class="input-box-default"
+                id="imgUrl"
+              />
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="area">景點地區</label>
+              <select class="input-box-default" id="area">
+                <option value="" selected disabled>請選擇景點地區</option>
+                <option value="全部">全部</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+                <option value="花蓮">花蓮</option>
+              </select>
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="price">套票金額</label>
+              <input
+                type="number"
+                placeholder="請填寫套票金額"
+                class="input-box-default input-box-number"
+                id="price"
+                min="0"
+              />
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="group">套票組數</label>
+              <input
+                type="number"
+                placeholder="請填寫套票組數"
+                class="input-box-default input-box-number"
+                id="group"
+                min="0"
+              />
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="rate">套票星級</label>
+              <input
+                type="number"
+                placeholder="請填寫套票星級"
+                class="input-box-default input-box-number"
+                id="rate"
+                min="1"
+                max="10"
+              />
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label class="label-sm" for="description">套票描述</label>
+              <textarea
+                class="input-box-default"
+                id="description"
+                rows="10"
+                cols="10"
+                placeholder="請填寫套票描述（限100字）"
+              ></textarea>
+            </div>
+
+            <div class="alert-message"></div>
+          </div>
+        </div>
+        <input type="button" value="新增套票" class="btn" />
+      </form>
+    </section>
+    <section class="container">
+      <div class="result-area">
+        <div class="search-btn">
+          <select class="input-box-card" id="searchArea">
+            <option value="" selected disabled>請選擇景點地區</option>
+            <option value="全部">全部</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+            <option value="花蓮">花蓮</option>
+          </select>
+          <p>本次搜尋共 <span class="dataNum">3</span> 筆資料</p>
+        </div>
+        <div class="card-area">
+          <div class="card">
+            <div class="card-img">
+              <a href="#"
+                ><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                  alt="travel-pic1"
+              /></a>
+              <div class="cardTagArea label-md">高雄</div>
+              <div class="cardTagRate fs-md">8.5</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <a href="#" class="label-md">綠島自由行套裝行程</a>
+              </div>
+              <div class="card-content">
+                嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+              </div>
+              <div class="card-footer">
+                <div class="card-footer-content">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  <p class="label-sm">剩下最後 87 組</p>
+                </div>
+                <p class="label-sm">TWD<span class="label-xl">$1400</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="all.js"></script>
+  </body>
+</html>
